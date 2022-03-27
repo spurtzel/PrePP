@@ -17,9 +17,9 @@ Before the DCEP Ambrosia engine can be started, the connection string from the A
 
 `export AZURE_STORAGE_CONN_STRING="DefaultEndpointsProtocol=https;AccountName=ExampleUser;AccountKey=AOSIDJiojsad48nj34EKMRkxBaQPW0Puy14mk32m4nvmPZ1y/6Ohx8lzE124ok4116Vm0L3d/M941BPyTo412nj4A==;EndpointSuffix=core.windows.net"`
 
-To start the Ambrosia implementation for 20 nodes using the input example `Q1_douleUpdate.txt`, run the following command from inside the directory `/bin`:
+To start the Ambrosia implementation for 20 nodes using the input example `ClusterMonitoringQ1.txt`, run the following command from inside the directory `/bin`:
 
-`../bin/run_all_linux.sh ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
+`../bin/run_all_linux.sh ../inputexamples/google_cluster/ClusterMonitoringQ1.txt -t Minute -w 30 -d 10 > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
 
@@ -27,7 +27,7 @@ The last lines of the created file `output.txt` contain the totally generated pr
 
 Likewise, our distributed query processor can be started as a simulation using the follwing command from inside the directory `/bin`:
 
-`../bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
+`../bin/DCEP.Simulation ../inputexamples/google_cluster/ClusterMonitoringQ1.txt -t Minute -w 30 -d 10 > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
 
