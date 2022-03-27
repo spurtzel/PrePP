@@ -86,8 +86,8 @@ namespace DCEP.Node
         [DataMember] private long _remainingTimeLastPrintTime = 0;
         [DataMember] private long _remainingTimeLastProcessedCount = 0;
         
-        [DataMember] private ConcurrentDictionary<NodeName, DateTime> TimestampsDict = new ConcurrentDictionary<NodeName, DateTime>(); // Samira
-        [DataMember] private DateTime oldestTimestamp = DateTime.MinValue; // Samira
+        [DataMember] private ConcurrentDictionary<NodeName, DateTime> TimestampsDict = new ConcurrentDictionary<NodeName, DateTime>(); 
+        [DataMember] private DateTime oldestTimestamp = DateTime.MinValue; // 
         
         [DataMember] private Dictionary<EventType, List<AbstractEvent>> pullEventBuffers;
         
@@ -114,7 +114,7 @@ namespace DCEP.Node
         
         [DataMember] private HashSet<NodeName> potentialPullEventDestinations = new HashSet<NodeName>();
         
-        //[DataMember] private HashSet<String> alreadyGenerated = new HashSet<String>(); //Steven
+        //[DataMember] private HashSet<String> alreadyGenerated = new HashSet<String>(); //
         
         
         //[DataMember] private int pullEventCounter;
@@ -873,7 +873,7 @@ namespace DCEP.Node
 
         public void processingStep(){
             
-            if (getQueuedEventCount()>10000 & dataSetMode) // Samira [ "artificial" input buffer of size 10000 - only works for reading input from file]
+            if (getQueuedEventCount()>10000 & dataSetMode) //  [ "artificial" input buffer of size 10000 - only works for reading input from file]
             {
                //Console.WriteLine(TAG + $"Buffer capacity full!!!!");
                primitiveEventSourceService.setFull(true);
@@ -899,7 +899,7 @@ namespace DCEP.Node
             AbstractEvent internalEvent = null;
             if (internalEventQueue.Data.TryDequeue(out internalEvent))
             {
-                if(internalEvent.knownToNodes.Count==0) internalEvent.knownToNodes.Add(this.nodeName); // Samira : now internal primtive events have two identical entries, however complex events did not get a first entry before   
+                if(internalEvent.knownToNodes.Count==0) internalEvent.knownToNodes.Add(this.nodeName); //  : now internal primtive events have two identical entries, however complex events did not get a first entry before   
                
                 var processingStart = stopwatch.ElapsedMilliseconds;
                 if (queryProcessors.Count != 0) 
@@ -927,23 +927,23 @@ namespace DCEP.Node
         private void processQueries(AbstractEvent inputEvent)
         {
 
-            DateTime t = inputEvent.getOldest(); // Samira  [getOldest is defined as generation time for prim, oldest timestamp of contained prim for complex events]
+            DateTime t = inputEvent.getOldest(); //   [getOldest is defined as generation time for prim, oldest timestamp of contained prim for complex events]
 
-            if (TimestampsDict.TryGetValue(inputEvent.knownToNodes[0], out DateTime value)) // Samira [if t is older than the oldest timestamp received from the same node (inputEvent.knownToNodes[0])
+            if (TimestampsDict.TryGetValue(inputEvent.knownToNodes[0], out DateTime value)) //  [if t is older than the oldest timestamp received from the same node (inputEvent.knownToNodes[0])
             {
                 if (t > value) 
                     TimestampsDict.AddOrUpdate(inputEvent.knownToNodes[0], t, (key, oldValue) => t); 
             }
-            else // Samira: If not initialized, set to t
+            else // : If not initialized, set to t
             {
                 TimestampsDict.AddOrUpdate(inputEvent.knownToNodes[0], t, (key, oldValue) => t);
             }
 
             
-            t = TimestampsDict.Values.Min(); // Samira [get current oldest value and use it for removing activations in between]
+            t = TimestampsDict.Values.Min(); //  [get current oldest value and use it for removing activations in between]
             if (t > oldestTimestamp) 
             {
-                oldestTimestamp = t; // Samira [oldest timestamp updated -> trigger activation deletion]
+                oldestTimestamp = t; //  [oldest timestamp updated -> trigger activation deletion]
 
                 foreach (var queryProcessor in queryProcessors) 
                 {
@@ -957,7 +957,7 @@ namespace DCEP.Node
                 foreach (var outputEvent in outputEvents)
                 {
                     outputEvent.timeSent = DateTime.Now;
-                    proxyProvider.getProxy(nodeName).RegisterComplexEventMatchFork(outputEvent, false); // Samira [isDropped is always false, as dropping events now happens during processing]
+                    proxyProvider.getProxy(nodeName).RegisterComplexEventMatchFork(outputEvent, false); //  [isDropped is always false, as dropping events now happens during processing]
                 }
                 
                 foreach (var pullRequest in pullRequests)
@@ -1068,7 +1068,7 @@ namespace DCEP.Node
         public async Task RegisterComplexEventMatchAsync(ComplexEvent e, bool isDropped)
         {
             
-            TimeSpan delay = DateTime.Now - e.getNewestAlt(); // Samira [getNewestAlt reflects actual time event was created as opposed to artificial time stamp caused by dataset based input generation]
+            TimeSpan delay = DateTime.Now - e.getNewestAlt(); //  [getNewestAlt reflects actual time event was created as opposed to artificial time stamp caused by dataset based input generation]
 
             Console.WriteLine("Complex;" + e.type + ";" +  delay);
 
