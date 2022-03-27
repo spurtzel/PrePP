@@ -60,14 +60,14 @@ namespace DCEP.Core
         private TimeSpan maxActiveEventBufferTime = new TimeSpan();
         
         [DataMember] 
-        private HashSet<String> pullRequestAlreadySent = new HashSet<String>(); //Steven
+        private HashSet<String> pullRequestAlreadySent = new HashSet<String>(); 
         
         [DataMember]
         private Dictionary<EventType, int> pullRequestTypeCounter = new Dictionary<EventType, int>();
         
         
         [DataMember]
-        private HashSet<String> activationAlreadyProduced = new HashSet<String>(); //Steven
+        private HashSet<String> activationAlreadyProduced = new HashSet<String>();
         
         public QueryProcessorUniqueComponents(Query query, TimeSpan timeWindow, ExecutionPlan executionPlan_, NodeName nodeName_) : base(query, timeWindow)
         {
@@ -771,7 +771,7 @@ namespace DCEP.Core
             List<ComplexEvent> outputEvents = new List<ComplexEvent>();
             List<PullRequestMessage> pullRequests = new List<PullRequestMessage>();
             
-            List<Tuple<EventType,Activation>> invalidActivations = new List<Tuple<EventType,Activation>>(); //Samira [for removing partial matches due to expired timestamp]
+            List<Tuple<EventType,Activation>> invalidActivations = new List<Tuple<EventType,Activation>>(); // [for removing partial matches due to expired timestamp]
             
             foreach (var activation in activationsByInputEventType[e.type])
             {
