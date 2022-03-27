@@ -7,7 +7,7 @@ This repository contains the queries and realworld data sets used in our case st
 
 #### PrePP
 
-The directory `INEv` contains the implementation of our algorithms and the scripts used to conduct the experiments presented in the paper.
+The directory `PrePP` contains the implementation of our algorithms and the scripts used to conduct the experiments presented in the paper.
 
 #### DCEP_Ambrosia
 
