@@ -1,0 +1,28 @@
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+-----------
+Dataset-Based Primitive Event Generation 
+hm_input_%NodeName%.txt
+-----------
+SELECT SEQ(B, D, C, AND(H, I)) FROM  B, D, C, H, I  ON {0}/n(C)
+SELECT AND(B, H, I) FROM  B, H, I  ON {0}/n(B)
+SELECT SEQ(D, E, H, I) FROM  D, H, I, E  ON {0}/n(E)
+

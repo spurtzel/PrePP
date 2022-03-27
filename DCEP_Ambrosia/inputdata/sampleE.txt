@@ -1,0 +1,5 @@
+10 10 10 10z
+-----------
+Randomized Rate-Based Primitive Event Generation
+-----------
+SELECT AND(A,B,C,D) FROM A,B,C,D ON n(A)

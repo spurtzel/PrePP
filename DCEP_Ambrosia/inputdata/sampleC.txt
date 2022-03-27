@@ -1,0 +1,22 @@
+5 0 0 20 30 200
+0 1000 10 0 0 0
+5 0 10 0 0 200
+0 1000 0 20 0 0
+5 0 0 20 30 0
+0 1000 10 0 0 200
+5 0 10 0 30 0
+0 1000 0 20 0 0
+5 0 0 20 30 200
+0 1000 10 0 0 0
+-----------
+Randomized Rate-Based Primitive Event Generation
+-----------
+SELECT SEQ(A,B,C,D,F)      FROM SEQ(C,F),A,B,D                    ON n(B)
+SELECT SEQ(C,F)            FROM C,F                               ON n(F) WITH selectionRate=0.0008
+SELECT SEQ(E,B,AND(D,C,F)) FROM SEQ(E,AND(D,C,F)),B		  ON n(B)
+SELECT SEQ(E,AND(D,C,F))   FROM SEQ(E,AND(C,F)),D 		  ON n(D) WITH selectionRate=0.0000001 
+SELECT SEQ(E,AND(C,F))     FROM SEQ(E,F),C                        ON n(C) WITH selectionRate=0.000001 
+SELECT AND(A,SEQ(D,E,F))   FROM AND(A,SEQ(E,F)),D                 ON n(D)
+SELECT AND(A,SEQ(E,F))     FROM SEQ(E,F),A                        ON {0}/n(F) WITH selectionRate=0.07
+SELECT SEQ(E,F)            FROM E,F                               ON n(F) WITH selectionRate=0.0001
+

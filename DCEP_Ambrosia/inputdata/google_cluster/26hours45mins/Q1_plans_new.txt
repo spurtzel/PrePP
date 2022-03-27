@@ -1,0 +1,1144 @@
+Python 3.8.3rc1 (tags/v3.8.3rc1:802eb67, Apr 29 2020, 21:39:14) [MSC v.1924 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+= RESTART: C:\Users\stevi\Desktop\Google Cluster Queries\determine_push_pull_muse_and_centralized_push_pull_costs.py
+single_sink_evaluation_node 0
+SEQ(A, H, B, I)
+
+~~
+SEQ(A, H, B, I)
+Determine all needed event type permutations..
+Event type permutations determined!
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.6877731379761929, 'A|AB': 0.007269839026735984, 'H|AH': 0.07761140441103888, 'A|AH': 0.06442352174842021, 'A|AI': 0.8286029186105619, 'I|AI': 0.006034253425493868, 'H|BH': 0.4818017422964756, 'B|BH': 0.010377712575649553, 'I|BI': 0.6708624611099874, 'B|BI': 0.007453092533642681, 'H|HI': 0.7564212096717869, 'I|HI': 0.0066100737738032395, 'B|ABH': 0.007660142370413339, 'H|ABH': 0.26506235540250767, 'A|ABH': 6.156375747887018e-05, 'B|ABI': 0.004623717374415134, 'I|ABI': 0.46423123350408246, 'A|ABI': 5.823503980459779e-05, 'H|AHI': 0.08824942148887546, 'I|AHI': 0.02868014692082008, 'A|AHI': 4.938746946082187e-05, 'I|BHI': 0.007088257223043452, 'H|BHI': 0.34927207265966004, 'B|BHI': 5.049015250657207e-05, 'A|ABHI': 0.4947846163195742, 'I|ABHI': 0.8746939247194789, 'H|ABHI': 0.6935784008775255, 'B|ABHI': 5.205376746101801e-14}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+867.3675605590005
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'I']]
+3 : [['H', 'I'], ['B'], ['A']]
+838.6428279121411
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+1085.2884052975262
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 970.4847839865222
+Greedy Average: 970.4847839865222
+Average greedy algorithm execution time: 0.0004002999999999646
+####### EXACT #######
+Exact network costs: 838.6428279121411
+Exact Average: 838.6428279121411
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 838.6428279121411
+Factorial Average: 838.6428279121411
+Average factorial approximation algorithm execution time: 0.0034239999999999826
+####### SAMPLING #######
+Sampling approximated network costs: 19341.27825513478
+Sampling Average: 19341.27825513478
+Average sampling approximation algorithm execution time: 0.0014874000000000276
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 1 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+867.3675605590005
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'I']]
+3 : [['H', 'I'], ['B'], ['A']]
+838.6428279121411
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+1085.2884052975262
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 970.4847839865222
+Greedy Average: 970.4847839865222
+Average greedy algorithm execution time: 0.0004204999999999348
+####### EXACT #######
+Exact network costs: 838.6428279121411
+Exact Average: 838.6428279121411
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 838.6428279121411
+Factorial Average: 838.6428279121411
+Average factorial approximation algorithm execution time: 0.003322200000000053
+####### SAMPLING #######
+Sampling approximated network costs: 1003.4243178849567
+Sampling Average: 1003.4243178849567
+Average sampling approximation algorithm execution time: 0.0015946000000000016
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 1 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.46350409370416273, 'A|AB': 0.010787391239722928, 'H|AH': 0.09308907475307132, 'A|AH': 0.05371199588418976, 'A|AI': 0.20561326171547584, 'I|AI': 0.024317497608295886, 'B|BH': 0.029654691212500306, 'H|BH': 0.16860738707986803, 'B|BI': 0.05944422556370219, 'I|BI': 0.08411245924369647, 'H|HI': 0.7894686634521121, 'I|HI': 0.0063333736112292085, 'H|ABH': 0.13456882859515606, 'B|ABH': 0.013717236388813111, 'A|ABH': 6.771718842432365e-05, 'I|ABI': 0.07661641472572973, 'A|ABI': 0.025569424764100738, 'B|ABI': 6.380683897055842e-05, 'H|AHI': 0.059076352755471316, 'I|AHI': 0.04946462210805671, 'A|AHI': 4.277614491308265e-05, 'I|BHI': 0.0057523427128271685, 'H|BHI': 0.2734353413792997, 'B|BHI': 7.947135434287282e-05, 'I|ABHI': 0.6794146709546681, 'H|ABHI': 0.23778939448106753, 'A|ABHI': 0.8994846776031381, 'B|ABHI': 1.0752237650176876e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+948.3149836404086
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+921.5880261673337
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1112.0710985220817
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1180.7765367475322
+Greedy Average: 1075.6306603670273
+Average greedy algorithm execution time: 0.00039174999999994076
+####### EXACT #######
+Exact network costs: 921.5880261673337
+Exact Average: 880.1154270397374
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 921.5880261673337
+Factorial Average: 880.1154270397374
+Average factorial approximation algorithm execution time: 0.003267399999999976
+####### SAMPLING #######
+Sampling approximated network costs: 47614
+Sampling Average: 33477.63912756739
+Average sampling approximation algorithm execution time: 0.0013890500000000583
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 2 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+948.3149836404086
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+921.5880261673337
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1112.0710985220817
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1180.7765367475322
+Greedy Average: 1075.6306603670273
+Average greedy algorithm execution time: 0.00039994999999998226
+####### EXACT #######
+Exact network costs: 921.5880261673337
+Exact Average: 880.1154270397374
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 921.5880261673337
+Factorial Average: 880.1154270397374
+Average factorial approximation algorithm execution time: 0.0032122500000000276
+####### SAMPLING #######
+Sampling approximated network costs: 1112.0710985220817
+Sampling Average: 1057.7477082035193
+Average sampling approximation algorithm execution time: 0.001486299999999996
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 2 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.5221778770526146, 'B|AB': 0.009575281182385672, 'H|AH': 0.38977912032501194, 'A|AH': 0.012827777936978304, 'I|AI': 0.4238046419977346, 'A|AI': 0.011797888707473683, 'H|BH': 0.3821217057151703, 'B|BH': 0.013084836389082147, 'B|BI': 0.6081424141777109, 'I|BI': 0.00822175839644512, 'H|HI': 0.9093749633366951, 'I|HI': 0.005498282008616016, 'A|ABH': 0.0024948172932130665, 'H|ABH': 0.101611191806517, 'B|ABH': 0.000493094004459056, 'I|ABI': 0.18234074151299906, 'B|ABI': 0.0029085730212176173, 'A|ABI': 0.00023569280497768246, 'I|AHI': 0.03661906920318112, 'H|AHI': 0.09813177970598753, 'A|AHI': 3.4785082421145484e-05, 'I|BHI': 0.007643428629844009, 'H|BHI': 0.2811963692693007, 'B|BHI': 5.815835169431648e-05, 'I|ABHI': 0.8354337826366882, 'B|ABHI': 0.19179622832477713, 'A|ABHI': 0.715045702570435, 'H|ABHI': 1.3637480093822234e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+984.0199238540416
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+963.3223277518339
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1174.6068416048972
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1127.1377319611795
+Greedy Average: 1092.7996842317445
+Average greedy algorithm execution time: 0.0003832999999999198
+####### EXACT #######
+Exact network costs: 963.3223277518339
+Exact Average: 907.8510606104361
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 963.3223277518339
+Factorial Average: 907.8510606104361
+Average factorial approximation algorithm execution time: 0.003190200000000032
+####### SAMPLING #######
+Sampling approximated network costs: 963.3223277518339
+Sampling Average: 22639.53352762887
+Average sampling approximation algorithm execution time: 0.0014418666666667173
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 3 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+984.0199238540416
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+963.3223277518339
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1174.6068416048972
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1127.1377319611795
+Greedy Average: 1092.7996842317445
+Average greedy algorithm execution time: 0.0004114666666666193
+####### EXACT #######
+Exact network costs: 963.3223277518339
+Exact Average: 907.8510606104361
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 963.3223277518339
+Factorial Average: 907.8510606104361
+Average factorial approximation algorithm execution time: 0.0035921666666666554
+####### SAMPLING #######
+Sampling approximated network costs: 12197.49477058536
+Sampling Average: 4770.996728997466
+Average sampling approximation algorithm execution time: 0.0014338333333332824
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 3 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.9810032466026416, 'B|AB': 0.005096823091376848, 'H|AH': 0.5648101053003883, 'A|AH': 0.00885253283019928, 'A|AI': 0.9320598177371606, 'I|AI': 0.005364462564365147, 'H|BH': 0.5220450598484588, 'B|BH': 0.009577717297911828, 'B|BI': 0.7728871990771917, 'I|BI': 0.006469249336733584, 'H|HI': 0.5713476714469858, 'I|HI': 0.008751238956373239, 'B|ABH': 0.002829485214512988, 'H|ABH': 0.8923674702773247, 'A|ABH': 4.950611583839023e-05, 'I|ABI': 0.004292951464461106, 'B|ABI': 0.36008811879349684, 'A|ABI': 8.08621422287823e-05, 'H|AHI': 0.3368271895346685, 'I|AHI': 0.004579130351780758, 'A|AHI': 8.104381283037511e-05, 'H|BHI': 0.26166491390059404, 'I|BHI': 0.007632689804450062, 'B|BHI': 6.258739953220019e-05, 'A|ABHI': 0.9485377134167691, 'I|ABHI': 0.015395933704845773, 'B|ABHI': 0.7239782191455505, 'H|ABHI': 1.4778620263732974e-12}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+856.2695042894862
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'I']]
+3 : [['H', 'I'], ['B'], ['A']]
+812.0855590244714
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+1003.9213329470492
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 878.8130224119778
+Greedy Average: 1039.303018776803
+Average greedy algorithm execution time: 0.0003859749999999412
+####### EXACT #######
+Exact network costs: 812.0855590244714
+Exact Average: 883.909685213945
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 812.0855590244714
+Factorial Average: 883.909685213945
+Average factorial approximation algorithm execution time: 0.00324480000000002
+####### SAMPLING #######
+Sampling approximated network costs: 889.136814851545
+Sampling Average: 17201.93434943454
+Average sampling approximation algorithm execution time: 0.0013944250000000047
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 4 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+856.2695042894862
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'I']]
+3 : [['H', 'I'], ['B'], ['A']]
+812.0855590244714
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+1003.9213329470492
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 878.8130224119778
+Greedy Average: 1039.303018776803
+Average greedy algorithm execution time: 0.00040417499999997886
+####### EXACT #######
+Exact network costs: 812.0855590244714
+Exact Average: 883.909685213945
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 812.0855590244714
+Factorial Average: 883.909685213945
+Average factorial approximation algorithm execution time: 0.0034686999999999912
+####### SAMPLING #######
+Sampling approximated network costs: 5570.040443348833
+Sampling Average: 4970.757657585307
+Average sampling approximation algorithm execution time: 0.001423999999999953
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 4 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.13354311368262486, 'B|AB': 0.037441091959881, 'H|AH': 0.2763144362714344, 'A|AH': 0.018095326713542775, 'I|AI': 0.23648229454102457, 'A|AI': 0.021143231926534813, 'B|BH': 0.03832620032614067, 'H|BH': 0.13045905822784404, 'B|BI': 0.44625582703576805, 'I|BI': 0.011204335488932994, 'H|HI': 0.7415546136746722, 'I|HI': 0.006742591722574802, 'A|ABH': 0.004606231729681671, 'H|ABH': 0.433287592251521, 'B|ABH': 6.263080269322179e-05, 'I|ABI': 0.00407032119748571, 'B|ABI': 0.5093147794627714, 'A|ABI': 6.029690941904618e-05, 'H|AHI': 0.2830638369661739, 'I|AHI': 0.01039508089926472, 'A|AHI': 4.2481295278690905e-05, 'I|BHI': 0.01365075934239912, 'H|BHI': 0.10105529851656928, 'B|BHI': 9.061375200306561e-05, 'A|ABHI': 0.15756777468358368, 'I|ABHI': 0.41414011578141297, 'H|ABHI': 0.8623711607361474, 'B|ABHI': 2.776585807253955e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+915.4071752865326
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+885.7256630495425
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1087.250605199677
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 967.8499397072055
+Greedy Average: 1025.0124029628835
+Average greedy algorithm execution time: 0.00038687999999994507
+####### EXACT #######
+Exact network costs: 885.7256630495425
+Exact Average: 884.2728807810645
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 885.7256630495425
+Factorial Average: 884.2728807810645
+Average factorial approximation algorithm execution time: 0.003228019999999998
+####### SAMPLING #######
+Sampling approximated network costs: 885.7256630495425
+Sampling Average: 13938.692612157542
+Average sampling approximation algorithm execution time: 0.0014003200000000104
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 5 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+915.4071752865326
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+885.7256630495425
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1087.250605199677
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 967.8499397072055
+Greedy Average: 1025.0124029628835
+Average greedy algorithm execution time: 0.00040104000000000805
+####### EXACT #######
+Exact network costs: 885.7256630495425
+Exact Average: 884.2728807810645
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 885.7256630495425
+Factorial Average: 884.2728807810645
+Average factorial approximation algorithm execution time: 0.003428180000000003
+####### SAMPLING #######
+Sampling approximated network costs: 10376.633595057077
+Sampling Average: 6051.932845079662
+Average sampling approximation algorithm execution time: 0.0014164799999999422
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 5 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.9273204872382002, 'B|AB': 0.005391879149452733, 'H|AH': 0.8849280980531873, 'A|AH': 0.005650176563496894, 'I|AI': 0.5596751433054833, 'A|AI': 0.008933753910294507, 'H|BH': 0.5801574175084111, 'B|BH': 0.008618350552981614, 'I|BI': 0.466833665250081, 'B|BI': 0.010710452934711808, 'H|HI': 0.8378392643221357, 'I|HI': 0.005967731774954845, 'H|ABH': 0.936553296427638, 'A|ABH': 0.001297761403124981, 'B|ABH': 0.00010284487687745862, 'I|ABI': 0.10555033139310971, 'B|ABI': 0.02916546902315227, 'A|ABI': 4.06051806436297e-05, 'H|AHI': 0.12625990601064543, 'I|AHI': 0.022043550428327074, 'A|AHI': 4.491206317377229e-05, 'I|BHI': 0.017714928520580178, 'H|BHI': 0.055683781434848575, 'B|BHI': 0.00012671904421219414, 'I|ABHI': 0.9313423028665154, 'H|ABHI': 0.7548933788173239, 'A|ABHI': 0.8094009720705271, 'B|ABHI': 2.745752315628361e-14}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+899.4942146462681
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+875.4071912310941
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1159.916254018044
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1021.5216481959392
+Greedy Average: 1024.430610501726
+Average greedy algorithm execution time: 0.0003862499999999676
+####### EXACT #######
+Exact network costs: 875.4071912310941
+Exact Average: 882.7952658560694
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 875.4071912310941
+Factorial Average: 882.7952658560694
+Average factorial approximation algorithm execution time: 0.003207149999999992
+####### SAMPLING #######
+Sampling approximated network costs: 875.4071912310941
+Sampling Average: 11761.478375336466
+Average sampling approximation algorithm execution time: 0.001396150000000022
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 6 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+899.4942146462681
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+875.4071912310941
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1159.916254018044
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1021.5216481959392
+Greedy Average: 1024.430610501726
+Average greedy algorithm execution time: 0.00039653333333339313
+####### EXACT #######
+Exact network costs: 875.4071912310941
+Exact Average: 882.7952658560694
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 875.4071912310941
+Factorial Average: 882.7952658560694
+Average factorial approximation algorithm execution time: 0.0033713666666666344
+####### SAMPLING #######
+Sampling approximated network costs: 3878.3044798637243
+Sampling Average: 5689.661450877006
+Average sampling approximation algorithm execution time: 0.0013846999999999239
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 6 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.29868523493898264, 'B|AB': 0.01674003069157882, 'H|AH': 0.9294822314751924, 'A|AH': 0.005379338981084598, 'A|AI': 0.9084476130086341, 'I|AI': 0.00550389469728562, 'H|BH': 0.9440811177262188, 'B|BH': 0.005296155071973368, 'I|BI': 0.7981354897330325, 'B|BI': 0.006264600514973272, 'H|HI': 0.7385253288121065, 'I|HI': 0.00677024850053868, 'B|ABH': 0.003861150719111617, 'H|ABH': 0.08719938195730795, 'A|ABH': 0.00037126144585630295, 'A|ABI': 0.009924461228248771, 'I|ABI': 0.06280976592477573, 'B|ABI': 0.00020052840464237216, 'I|AHI': 0.002768872845087701, 'H|AHI': 0.9142003427304881, 'A|AHI': 4.9381652742540656e-05, 'B|BHI': 1.0, 'H|BHI': 1.0, 'I|BHI': 1.0, 'I|ABHI': 0.7074742873378578, 'A|ABHI': 0.16471860998346338, 'B|ABHI': 0.5850853338145693, 'H|ABHI': 2.291645756314659e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+889.6975746873484
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'I']]
+3 : [['H', 'I'], ['A'], ['B']]
+859.8163805134591
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+2919.481225869101
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 889.6975746873484
+Greedy Average: 1005.183033956815
+Average greedy algorithm execution time: 0.00038525714285712686
+####### EXACT #######
+Exact network costs: 859.8163805134591
+Exact Average: 879.5125679499822
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 859.8163805134591
+Factorial Average: 879.5125679499822
+Average factorial approximation algorithm execution time: 0.0031984571428571424
+####### SAMPLING #######
+Sampling approximated network costs: 5133.359415338867
+Sampling Average: 10814.604238193951
+Average sampling approximation algorithm execution time: 0.0014276857142857535
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 7 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+889.6975746873484
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'I']]
+3 : [['H', 'I'], ['A'], ['B']]
+859.8163805134591
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+2919.481225869101
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 889.6975746873484
+Greedy Average: 1005.183033956815
+Average greedy algorithm execution time: 0.0003941714285714548
+####### EXACT #######
+Exact network costs: 859.8163805134591
+Exact Average: 879.5125679499822
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 859.8163805134591
+Factorial Average: 879.5125679499822
+Average factorial approximation algorithm execution time: 0.0033591714285713553
+####### SAMPLING #######
+Sampling approximated network costs: 859.8163805134591
+Sampling Average: 4999.683583682214
+Average sampling approximation algorithm execution time: 0.0013634285714285552
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 7 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.2596681457938914, 'B|AB': 0.019255346029114762, 'H|AH': 0.8296673196549517, 'A|AH': 0.006026511930202865, 'I|AI': 0.3094670003748319, 'A|AI': 0.016156811530612027, 'H|BH': 0.8743156920557025, 'B|BH': 0.0057187581618762156, 'B|BI': 0.16496385006878855, 'I|BI': 0.030309670863737974, 'I|HI': 0.012207262320680473, 'H|HI': 0.4095922467013295, 'H|ABH': 0.49604271485328705, 'B|ABH': 0.00042404792501749016, 'A|ABH': 0.0005942593106675012, 'A|ABI': 0.06333721655854069, 'I|ABI': 0.02828695776976958, 'B|ABI': 6.976936931050807e-05, 'H|AHI': 0.6830348261246623, 'I|AHI': 0.004569813758839253, 'A|AHI': 4.0046877963032607e-05, 'I|BHI': 0.0027865921094231572, 'H|BHI': 0.3007624155231908, 'B|BHI': 0.00014914649298323576, 'H|ABHI': 0.6875246529247939, 'A|ABHI': 0.3045975125702703, 'I|ABHI': 0.7615495931634403, 'B|ABHI': 9.797318069319377e-14}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+805.2535277753434
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'I']]
+3 : [['H', 'I'], ['A'], ['B']]
+736.1170938200304
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+946.3088845687464
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1026.6423577206215
+Greedy Average: 1007.8654494272909
+Average greedy algorithm execution time: 0.00038499999999997564
+####### EXACT #######
+Exact network costs: 736.1170938200304
+Exact Average: 861.5881336837382
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 736.1170938200304
+Factorial Average: 861.5881336837382
+Average factorial approximation algorithm execution time: 0.003191074999999974
+####### SAMPLING #######
+Sampling approximated network costs: 839.0040765881604
+Sampling Average: 9567.654217993228
+Average sampling approximation algorithm execution time: 0.0014283375000000015
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 8 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+805.2535277753434
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'I']]
+3 : [['H', 'I'], ['A'], ['B']]
+736.1170938200304
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+946.3088845687464
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1026.6423577206215
+Greedy Average: 1007.8654494272909
+Average greedy algorithm execution time: 0.00039188750000006267
+####### EXACT #######
+Exact network costs: 736.1170938200304
+Exact Average: 861.5881336837382
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 736.1170938200304
+Factorial Average: 861.5881336837382
+Average factorial approximation algorithm execution time: 0.0033349749999999345
+####### SAMPLING #######
+Sampling approximated network costs: 27520.380913226374
+Sampling Average: 7814.770749875233
+Average sampling approximation algorithm execution time: 0.0013768749999999857
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 8 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.363748163124942, 'B|AB': 0.013745773881152426, 'H|AH': 0.8700265365525347, 'A|AH': 0.005746951144516137, 'A|AI': 0.26467824841757837, 'I|AI': 0.018890860997808876, 'H|BH': 0.40138754481724614, 'B|BH': 0.012456789117052763, 'I|BI': 0.22136904476067934, 'B|BI': 0.02258671715101571, 'H|HI': 0.09739704445062079, 'I|HI': 0.05133626002927578, 'H|ABH': 0.12785005000424587, 'B|ABH': 0.02260027177212348, 'A|ABH': 4.3260889927258244e-05, 'B|ABI': 0.002703086104076969, 'I|ABI': 0.23135078978580573, 'A|ABI': 0.0001998845131127169, 'H|AHI': 0.7018900493903192, 'I|AHI': 0.004063367323060576, 'A|AHI': 4.382832200577327e-05, 'H|BHI': 0.2033404435536172, 'I|BHI': 0.0045395080884781626, 'B|BHI': 0.00013541832952540278, 'A|ABHI': 0.528674722027217, 'I|ABHI': 0.36989731995152514, 'B|ABHI': 0.6181277054991917, 'H|ABHI': 1.2926236152491854e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+1335.01879935222
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+983.3710019408487
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1282.9979838772258
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1511.5574707329542
+Greedy Average: 1063.8312295723647
+Average greedy algorithm execution time: 0.0003840333333333236
+####### EXACT #######
+Exact network costs: 983.3710019408487
+Exact Average: 875.1195634900838
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 983.3710019408487
+Factorial Average: 875.1195634900838
+Average factorial approximation algorithm execution time: 0.003182155555555529
+####### SAMPLING #######
+Sampling approximated network costs: 37056.7492573717
+Sampling Average: 12621.998111257502
+Average sampling approximation algorithm execution time: 0.0014079777777778037
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 9 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+1335.01879935222
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+983.3710019408487
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1282.9979838772258
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1511.5574707329542
+Greedy Average: 1063.8312295723647
+Average greedy algorithm execution time: 0.00039084444444447016
+####### EXACT #######
+Exact network costs: 983.3710019408487
+Exact Average: 875.1195634900838
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 983.3710019408487
+Factorial Average: 875.1195634900838
+Average factorial approximation algorithm execution time: 0.0033080666666666213
+####### SAMPLING #######
+Sampling approximated network costs: 4477.187518275842
+Sampling Average: 7443.928168586412
+Average sampling approximation algorithm execution time: 0.0013506111111110971
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 9 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.8465585880303289, 'A|AB': 0.005906265757262472, 'H|AH': 0.7641311700695974, 'A|AH': 0.006543379194366064, 'I|AI': 0.7847228906027267, 'A|AI': 0.006371675988908162, 'H|BH': 0.513931282784267, 'B|BH': 0.009728927129930813, 'B|BI': 0.734937267783262, 'I|BI': 0.006803301749931852, 'H|HI': 0.32469494001051785, 'I|HI': 0.015399069661627726, 'H|ABH': 0.11966019055859638, 'B|ABH': 0.003896803531799808, 'A|ABH': 0.00026807222111519875, 'A|ABI': 0.013035823344917314, 'I|ABI': 0.13321709306225527, 'B|ABI': 7.197995882093347e-05, 'I|AHI': 0.02138344250608955, 'H|AHI': 0.15971088938776595, 'A|AHI': 3.660141383297117e-05, 'B|BHI': 1.0, 'H|BHI': 1.0, 'I|BHI': 1.0, 'H|ABHI': 0.23176654468545677, 'A|ABHI': 0.3686982167932093, 'I|ABHI': 0.6933701218736513, 'B|ABHI': 2.637139594110987e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+939.1935971553215
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'I']]
+3 : [['H', 'I'], ['A'], ['B']]
+847.0123141983693
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+4276.375192484218
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 970.8644631851489
+Greedy Average: 1054.5345529336432
+Average greedy algorithm execution time: 0.0003831999999999669
+####### EXACT #######
+Exact network costs: 847.0123141983693
+Exact Average: 872.3088385609124
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 847.0123141983693
+Factorial Average: 872.3088385609124
+Average factorial approximation algorithm execution time: 0.0031735999999999874
+####### SAMPLING #######
+Sampling approximated network costs: 847.0123141983693
+Sampling Average: 11444.499531551588
+Average sampling approximation algorithm execution time: 0.001386870000000029
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 10 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+939.1935971553215
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'I']]
+3 : [['H', 'I'], ['A'], ['B']]
+847.0123141983693
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+4276.375192484218
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 970.8644631851489
+Greedy Average: 1054.5345529336432
+Average greedy algorithm execution time: 0.0003893300000000433
+####### EXACT #######
+Exact network costs: 847.0123141983693
+Exact Average: 872.3088385609124
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 847.0123141983693
+Factorial Average: 872.3088385609124
+Average factorial approximation algorithm execution time: 0.0032838199999999816
+####### SAMPLING #######
+Sampling approximated network costs: 4276.375192484218
+Sampling Average: 7127.172870976193
+Average sampling approximation algorithm execution time: 0.0013608500000000024
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 10 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.7609197848635219, 'A|AB': 0.006570994866294345, 'H|AH': 0.3565297557560642, 'A|AH': 0.014024074903360868, 'A|AI': 0.9440865930293464, 'I|AI': 0.005296124356512897, 'H|BH': 0.9292060631073391, 'B|BH': 0.005380937768829878, 'I|BI': 0.17223680437589467, 'B|BI': 0.029029800094803507, 'H|HI': 0.39639314034306306, 'I|HI': 0.012613739974593637, 'B|ABH': 0.00037491268133608974, 'H|ABH': 0.1748096248786865, 'A|ABH': 0.001907280381340954, 'B|ABI': 0.10829763575267197, 'I|ABI': 0.01690752343713088, 'A|ABI': 6.826703475427708e-05, 'I|AHI': 0.012835659671865035, 'H|AHI': 0.2506752351364458, 'A|AHI': 3.884904868074603e-05, 'I|BHI': 0.008858146644414738, 'H|BHI': 0.10043711030410267, 'B|BHI': 0.0001404989046121961, 'H|ABHI': 0.6923899466958455, 'I|ABHI': 0.3488011973449959, 'B|ABHI': 0.06082526097537024, 'A|ABHI': 1.063671014122879e-12}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+877.0004413164539
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+804.9292386998878
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+938.8847493878443
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 959.954048439121
+Greedy Average: 1045.936325252323
+Average greedy algorithm execution time: 0.00038269999999993287
+####### EXACT #######
+Exact network costs: 804.9292386998878
+Exact Average: 866.1834203917283
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 804.9292386998878
+Factorial Average: 866.1834203917283
+Average factorial approximation algorithm execution time: 0.003165399999999985
+####### SAMPLING #######
+Sampling approximated network costs: 887.8828458225549
+Sampling Average: 10484.807105576223
+Average sampling approximation algorithm execution time: 0.0013926818181818623
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 11 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+877.0004413164539
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+804.9292386998878
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+938.8847493878443
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 959.954048439121
+Greedy Average: 1045.936325252323
+Average greedy algorithm execution time: 0.00038885454545456444
+####### EXACT #######
+Exact network costs: 804.9292386998878
+Exact Average: 866.1834203917283
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 804.9292386998878
+Factorial Average: 866.1834203917283
+Average factorial approximation algorithm execution time: 0.0032671090909090635
+####### SAMPLING #######
+Sampling approximated network costs: 19520.040007854474
+Sampling Average: 8253.797156146946
+Average sampling approximation algorithm execution time: 0.0013746454545454443
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 11 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.3091332648869293, 'A|AB': 0.016174254174259873, 'H|AH': 0.18467659446955806, 'A|AH': 0.02707435673893259, 'I|AI': 0.13687520793359362, 'A|AI': 0.0365296248713339, 'H|BH': 0.7884500468104626, 'B|BH': 0.006341555841396205, 'I|BI': 0.16162934121294686, 'B|BI': 0.030934977291112595, 'H|HI': 0.15099497844227838, 'I|HI': 0.03311368398857963, 'H|ABH': 0.4021571151840438, 'A|ABH': 0.002145134317255132, 'B|ABH': 0.00014489712401230474, 'I|ABI': 0.14353300271274005, 'B|ABI': 0.007574079801760033, 'A|ABI': 0.00011498160485261618, 'I|AHI': 0.003458540241418557, 'H|AHI': 0.9785191859317941, 'A|AHI': 3.693582759940819e-05, 'H|BHI': 0.4799640467652258, 'I|BHI': 0.003268851030331149, 'B|BHI': 7.967208404100155e-05, 'A|ABHI': 0.848156696021653, 'I|ABHI': 0.725078374311778, 'B|ABHI': 0.9267119632690367, 'H|ABHI': 2.7416638708999935e-14}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+1055.4350467667612
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'I']]
+3 : [['H', 'I'], ['B'], ['A']]
+835.3542483692163
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+1034.7423367078452
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1339.4492361546022
+Greedy Average: 1070.3957344941796
+Average greedy algorithm execution time: 0.0003825666666665885
+####### EXACT #######
+Exact network costs: 835.3542483692163
+Exact Average: 863.6143227231856
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 835.3542483692163
+Factorial Average: 863.6143227231856
+Average factorial approximation algorithm execution time: 0.0031606916666666873
+####### SAMPLING #######
+Sampling approximated network costs: 1034.7423367078452
+Sampling Average: 9697.301708170524
+Average sampling approximation algorithm execution time: 0.0013954750000000442
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 12 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+1055.4350467667612
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'I']]
+3 : [['H', 'I'], ['B'], ['A']]
+835.3542483692163
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'I']]
+2 : [['H', 'I'], ['A', 'B']]
+1034.7423367078452
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1339.4492361546022
+Greedy Average: 1070.3957344941796
+Average greedy algorithm execution time: 0.000388158333333342
+####### EXACT #######
+Exact network costs: 835.3542483692163
+Exact Average: 863.6143227231856
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 835.3542483692163
+Factorial Average: 863.6143227231856
+Average factorial approximation algorithm execution time: 0.0032602083333332734
+####### SAMPLING #######
+Sampling approximated network costs: 835.3542483692163
+Sampling Average: 7635.593580498801
+Average sampling approximation algorithm execution time: 0.0013624749999999648
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 12 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.10943661972324906, 'A|AB': 0.04568854568648363, 'H|AH': 0.7160931643962747, 'A|AH': 0.006982331697322388, 'A|AI': 0.08325584664792239, 'I|AI': 0.06005584233794796, 'H|BH': 0.9522202523660157, 'B|BH': 0.005250886008332969, 'B|BI': 0.6738236118476184, 'I|BI': 0.007420339554872594, 'H|HI': 0.19419995627188563, 'I|HI': 0.025746658732506887, 'H|ABH': 0.22309848960687667, 'B|ABH': 0.01493235064843504, 'A|ABH': 3.752193296624115e-05, 'I|ABI': 0.033355901369854515, 'A|ABI': 0.0016458734598177674, 'B|ABI': 0.0022768839191839828, 'H|AHI': 0.40681282524608947, 'I|AHI': 0.003819751574311037, 'A|AHI': 8.04415181542677e-05, 'H|BHI': 0.07100521743943598, 'I|BHI': 0.028570470508911424, 'B|BHI': 6.161725667517568e-05, 'A|ABHI': 0.178268728722691, 'B|ABHI': 0.47549810602529735, 'H|ABHI': 0.9052468488822514, 'I|ABHI': 2.0362403794345812e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+912.1234245608708
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+745.2325485121711
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+976.3614414451699
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 912.1234245608708
+Greedy Average: 1058.2209414223867
+Average greedy algorithm execution time: 0.00038223846153841916
+####### EXACT #######
+Exact network costs: 745.2325485121711
+Exact Average: 854.5080323992614
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 745.2325485121711
+Factorial Average: 854.5080323992614
+Average factorial approximation algorithm execution time: 0.003155738461538459
+####### SAMPLING #######
+Sampling approximated network costs: 894.8024174626835
+Sampling Average: 9020.186378116076
+Average sampling approximation algorithm execution time: 0.0013946846153846627
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 13 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['B'], ['A']]
+4 : [['H'], ['I'], ['B'], ['A']]
+912.1234245608708
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['B', 'H']]
+3 : [['H', 'I'], ['B'], ['A']]
+745.2325485121711
+used_eventtypes_to_pull: [[], ['I', 'H'], ['B', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+976.3614414451699
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 912.1234245608708
+Greedy Average: 1058.2209414223867
+Average greedy algorithm execution time: 0.0003876769230769175
+####### EXACT #######
+Exact network costs: 745.2325485121711
+Exact Average: 854.5080323992614
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 745.2325485121711
+Factorial Average: 854.5080323992614
+Average factorial approximation algorithm execution time: 0.003248899999999948
+####### SAMPLING #######
+Sampling approximated network costs: 894.8024174626835
+Sampling Average: 7117.0711833421765
+Average sampling approximation algorithm execution time: 0.0013711769230768923
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 13 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.10357623947938763, 'A|AB': 0.04827361975228917, 'A|AH': 0.04967873923163427, 'H|AH': 0.1006466765729859, 'A|AI': 0.9980983598458052, 'I|AI': 0.005009526316396755, 'B|BH': 0.023791314995221198, 'H|BH': 0.2101607246595792, 'B|BI': 0.7185713693021484, 'I|BI': 0.006958251070949051, 'H|HI': 0.5362499404017868, 'I|HI': 0.009324010360269199, 'A|ABH': 0.026870852818377214, 'H|ABH': 0.09050472498298616, 'B|ABH': 5.139931247399015e-05, 'B|ABI': 0.01935938499926949, 'I|ABI': 0.16687038173095844, 'A|ABI': 3.869360526516699e-05, 'H|AHI': 0.12907670128978135, 'I|AHI': 0.02356742900732868, 'A|AHI': 4.109130627635305e-05, 'H|BHI': 0.07464568691769692, 'I|BHI': 0.026264082126381677, 'B|BHI': 6.375923040407452e-05, 'A|ABHI': 0.48734079274315034, 'H|ABHI': 0.6520421508541111, 'B|ABHI': 0.48685563788845887, 'I|ABHI': 1.009976771815246e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+817.4336449063712
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+769.1142901052276
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+965.8566816734069
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 817.4336449063712
+Greedy Average: 1041.0218488140997
+Average greedy algorithm execution time: 0.0003823571428571109
+####### EXACT #######
+Exact network costs: 769.1142901052276
+Exact Average: 848.4084793782591
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 769.1142901052276
+Factorial Average: 848.4084793782591
+Average factorial approximation algorithm execution time: 0.003151878571428584
+####### SAMPLING #######
+Sampling approximated network costs: 916.3094819689832
+Sampling Average: 8441.338028391283
+Average sampling approximation algorithm execution time: 0.0013991500000000395
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 14 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+817.4336449063712
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+769.1142901052276
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+965.8566816734069
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 817.4336449063712
+Greedy Average: 1041.0218488140997
+Average greedy algorithm execution time: 0.00038757142857138397
+####### EXACT #######
+Exact network costs: 769.1142901052276
+Exact Average: 848.4084793782591
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 769.1142901052276
+Factorial Average: 848.4084793782591
+Average factorial approximation algorithm execution time: 0.003240778571428523
+####### SAMPLING #######
+Sampling approximated network costs: 19395.57419291018
+Sampling Average: 7994.107112597034
+Average sampling approximation algorithm execution time: 0.001375892857142878
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 14 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'A|AB': 0.8036862401396097, 'B|AB': 0.006221333339154148, 'H|AH': 0.2826905487227298, 'A|AH': 0.017687184883227663, 'A|AI': 0.7549389626535771, 'I|AI': 0.0066230519914155985, 'H|BH': 0.4135024106366781, 'B|BH': 0.012091827934694257, 'B|BI': 0.46364726911676357, 'I|BI': 0.010784060066879882, 'H|HI': 0.6972303145569129, 'I|HI': 0.007171231507880549, 'H|ABH': 0.09071285056759491, 'A|ABH': 0.008899664360569886, 'B|ABH': 0.00015483444097929986, 'B|ABI': 0.030402254526135736, 'I|ABI': 0.10211318093817472, 'A|ABI': 4.0264509904467024e-05, 'I|AHI': 0.026629470770020664, 'H|AHI': 0.09961551706733043, 'A|AHI': 4.712164943894448e-05, 'B|BHI': 1.0, 'H|BHI': 1.0, 'I|BHI': 1.0, 'A|ABHI': 0.8474572268825836, 'I|ABHI': 0.08124914646697493, 'H|ABHI': 0.4122811674705144, 'B|ABHI': 5.50414585619674e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+877.6315802626273
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+844.8552887757298
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+5344.587672461092
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1014.0011262273488
+Greedy Average: 1039.2204673083163
+Average greedy algorithm execution time: 0.0003819933333333044
+####### EXACT #######
+Exact network costs: 844.8552887757298
+Exact Average: 848.1716000047571
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 844.8552887757298
+Factorial Average: 848.1716000047571
+Average factorial approximation algorithm execution time: 0.0031475800000000166
+####### SAMPLING #######
+Sampling approximated network costs: 10132.779731995213
+Sampling Average: 8554.100808631545
+Average sampling approximation algorithm execution time: 0.0014093866666666714
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 15 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+877.6315802626273
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['A', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+844.8552887757298
+used_eventtypes_to_pull: [[], ['I', 'H'], ['A', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+5344.587672461092
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1014.0011262273488
+Greedy Average: 1039.2204673083163
+Average greedy algorithm execution time: 0.00038730666666663506
+####### EXACT #######
+Exact network costs: 844.8552887757298
+Exact Average: 848.1716000047571
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 844.8552887757298
+Factorial Average: 848.1716000047571
+Average factorial approximation algorithm execution time: 0.0032351666666665963
+####### SAMPLING #######
+Sampling approximated network costs: 27005.261209439475
+Sampling Average: 9261.517385719864
+Average sampling approximation algorithm execution time: 0.001377820000000048
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 15 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Determine single selectivities for each projection..
+Single selectivities determined for each projection!
+single_selectivity_of_eventtype_within_projection: {'A': 1.0, 'B': 1.0, 'H': 1.0, 'I': 1.0, 'B|AB': 0.879413680225765, 'A|AB': 0.005685606344805086, 'H|AH': 0.7068344635295525, 'A|AH': 0.007073792037576493, 'I|AI': 0.29677315680559624, 'A|AI': 0.01684788494289358, 'B|BH': 0.03134547040866849, 'H|BH': 0.15951268029518123, 'B|BI': 0.06539781804817389, 'I|BI': 0.07645515017514587, 'H|HI': 0.11849064884500676, 'I|HI': 0.04219742273958104, 'H|ABH': 0.16101424240114162, 'B|ABH': 0.002127952674684193, 'A|ABH': 0.0003648242975840785, 'I|ABI': 0.035732826958427166, 'A|ABI': 0.008843668039628029, 'B|ABI': 0.0003955580292290007, 'I|AHI': 0.005870423843659333, 'H|AHI': 0.34520036788528285, 'A|AHI': 6.168354212617465e-05, 'I|BHI': 0.0025809029036294316, 'H|BHI': 0.6110213786284238, 'B|BHI': 7.926508707264523e-05, 'H|ABHI': 0.6287956906143375, 'B|ABHI': 0.16588053225087554, 'A|ABHI': 0.23308290147082467, 'I|ABHI': 6.426945742453582e-13}
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+1260.7900196643404
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+975.1246274845653
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1155.5633509395802
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Push-Pull MuSE costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1333.0010633555985
+Greedy Average: 1057.5817545612715
+Average greedy algorithm execution time: 0.00038182500000000577
+####### EXACT #######
+Exact network costs: 975.1246274845653
+Exact Average: 856.1061642222452
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 975.1246274845653
+Factorial Average: 856.1061642222452
+Average factorial approximation algorithm execution time: 0.0031477562500000153
+####### SAMPLING #######
+Sampling approximated network costs: 975.1246274845653
+Sampling Average: 8080.414797309858
+Average sampling approximation algorithm execution time: 0.0013978125000000188
+#######################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~AFTER 16 RUNS, THERE HAVE BEEN 0 ERRORS~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exact_push_pull_plan_for_a_projection: [['H', 'I'], ['A'], ['B']]
+4 : [['H'], ['I'], ['A'], ['B']]
+1260.7900196643404
+used_eventtypes_to_pull: [[], ['H'], ['I', 'H'], ['I', 'H']]
+3 : [['H', 'I'], ['A'], ['B']]
+975.1246274845653
+used_eventtypes_to_pull: [[], ['I', 'H'], ['I', 'H']]
+2 : [['H', 'I'], ['A', 'B']]
+1155.5633509395802
+used_eventtypes_to_pull: [[], ['I', 'H']]
+1 : [['A', 'H', 'B', 'I']]
+47614
+used_eventtypes_to_pull: [[]]
+§§§§§§§§§§ Centralized Push-Pull costs §§§§§§§§§§
+####### GREEDY #######
+Greedy network costs: 1333.0010633555985
+Greedy Average: 1057.5817545612715
+Average greedy algorithm execution time: 0.0003874437499999592
+####### EXACT #######
+Exact network costs: 975.1246274845653
+Exact Average: 856.1061642222452
+Average exact algorithm execution time: 0.0
+####### FACTORIAL #######
+Factorial approximated network costs: 975.1246274845653
+Factorial Average: 856.1061642222452
+Average factorial approximation algorithm execution time: 0.0032279124999999437
+Traceback (most recent call last):
+  File "C:\Users\stevi\Desktop\Google Cluster Queries\determine_push_pull_muse_and_centralized_push_pull_costs.py", line 833, in <module>
+    print("Average factorial approximation algorithm execution time:", factorial_accumulated_exec_time_single_sink/idx)
+KeyboardInterrupt
+>>> 

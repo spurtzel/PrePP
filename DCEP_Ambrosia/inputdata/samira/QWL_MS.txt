@@ -1,0 +1,35 @@
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+-----------
+Dataset-Based Primitive Event Generation 
+hm_input_%NodeName%.txt
+-----------
+SELECT SEQ(B, D, C, AND(H, I)) FROM  SEQ(C, AND(H, I)), SEQ(B, D, AND(H, I))  ON {0}/n(C)
+SELECT SEQ(C, AND(H, I)) FROM  C, H, I  ON {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}/n(C) WITH selectionRate = 0.000125
+SELECT SEQ(B, D, AND(H, I)) FROM  SEQ(B, AND(H, I)), SEQ(D, AND(H, I))  ON {0}/n(D) WITH selectionRate = 3.125e-07
+SELECT SEQ(B, AND(H, I)) FROM  AND(B, H, I)  ON {0}/n(B) WITH selectionRate = 0.0025
+SELECT SEQ(D, AND(H, I)) FROM  D, H, I  ON {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}/n(D) WITH selectionRate = 0.000125
+SELECT AND(B, H, I) FROM  B, H, I  ON {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}/n(B)
+SELECT SEQ(D, E, H, I) FROM  SEQ(D, H, I), SEQ(E, H, I)  ON {0}/n(E)
+SELECT SEQ(D, H, I) FROM  D, H, I  ON {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}/n(D) WITH selectionRate = 0.000125
+SELECT SEQ(E, H, I) FROM  SEQ(H, I), SEQ(E, I)  ON {0}/n(H) WITH selectionRate = 0.0025
+SELECT SEQ(H, I) FROM  H, I  ON {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}/n(B) WITH selectionRate = 0.05
+SELECT SEQ(E, I) FROM  E, I  ON {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}/n(E) WITH selectionRate = 0.05
