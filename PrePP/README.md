@@ -17,7 +17,7 @@ Please note, that only only one script can be executed at a time.
 Parameter | Meaning
 ------------ | -------------
 1. filename | required inputfile name, i.e., without ".txt" at the end
-2. cent or ppmuse | 
+2. cent or ppmuse | for centralized PrePP plans or, given a MuSE input, for computing P-P MuSE graphs
 3. g e f s |  g == greedy, e == exact, f == factorial approx, s == sampling
 4. #samples |  number of samples, only for sampling algorithm
 5. k |  value for top-k parameter, i.e., only for factorial and sampling algorithm
