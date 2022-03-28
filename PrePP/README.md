@@ -1,9 +1,7 @@
-# PrePP Algorithms
+# Plan Generators & PrePP Algorithms
 
-
-
-## Scripts
-Scripts for reproducing experiments presented in paper.
+## Plan generators
+Scripts for reproducing inputfiles for experiments presented in paper.
 Using the `_plan.sh`-version of a script, saves for each experiment the resulting INEv graphs in the `plans/` folder. 
 Please note, that only only one script can be executed at a time.
 
@@ -12,6 +10,18 @@ Please note, that only only one script can be executed at a time.
 - conflicting_qwl to reproduce performance of multi-query scenario with varying overlap in event types between queries
 - *\_qwl and *\_qwl\_plan execute set of experiments for query workloads of varying sizes, concrete event rates used in networks for experiments in paper can be found in top section of generate_network.py 
 
+## Parameters for PrePP script
+Example: for executing the `prepp.py` script with the inputfile `single_query.txt` for a centralized PrePP plan using the sampling algorithm with s = 1024, top-k = 10, 500 runs, and printing resulting plans. Outputs are saved into `output.txt`:
+`python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
+
+Example: for executing the `prepp.py` script with the inputfile `multi_query_muse.txt` for a P-P MuSE graph using the exact algorithm with s = 0, top-k = 0, 500 runs, and not printing resulting plans. Outputs are saved into `output.txt`:
+`python3 prepp.py multi_query_muse ppmuse e 0 0 500 f > output.txt`
+
+Example: for executing the `prepp.py` script with the inputfile `single_query.txt` for a centralized PrePP plan using the factorial algorithm (top-k == best-k single-step PrePP plans) with s = 0, top-k = 10, 500 runs, and printing resulting plans. Outputs are saved into `output.txt`:
+`python3 prepp.py single_query cent f 0 10 500 t > output.txt`
+
+Example: for executing the `prepp.py` script with the inputfile `multi_query_muse.txt` for a P-P MuSE graph using the greedy algorithm with s = 0, top-k = 0, 500 runs, and not printing resulting plans. Outputs are saved into `output.txt`:
+`python3 prepp.py multi_query_muse ppmuse g 0 0 500 f > output.txt`
 
 ### Parameters for PrePP script
 Parameter | Meaning
