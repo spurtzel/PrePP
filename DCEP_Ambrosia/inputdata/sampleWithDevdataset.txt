@@ -1,6 +1,0 @@
-0 1 1 0 1 1
------------
-Dataset-Based Primitive Event Generation 
-devdataset_short-%NodeName%.txt
------------
-SELECT AND(C,F) FROM C, F ON n(C)

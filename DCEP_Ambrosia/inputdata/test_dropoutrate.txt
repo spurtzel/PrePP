@@ -1,6 +1,0 @@
-0 1 1 0 1 1
------------
-Dataset-Based Primitive Event Generation 
-devdataset_short-%NodeName%.txt
------------
-SELECT SEQ(C,E) FROM C, E ON n(C) WITH selectionRate = 0.5
