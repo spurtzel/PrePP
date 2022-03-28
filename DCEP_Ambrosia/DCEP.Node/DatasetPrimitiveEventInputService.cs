@@ -90,7 +90,7 @@ namespace DCEP.Node
                     _candidateInQueue = true;
                 }
 
-                if (!_queueFull)//(_offset < _stopwatch.Elapsed) // Samira [if not queue full]
+                if (!_queueFull)//(_offset < _stopwatch.Elapsed) // [if not queue full]
                 {
                     if (_primitiveEventNames.Select(type => type.name).Contains(_eventtype)) 
                     {
