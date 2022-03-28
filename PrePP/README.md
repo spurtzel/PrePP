@@ -10,16 +10,6 @@ Go into `../Generators/multi query/eventNodeRatio/scripts` and execute the `even
 `python3 prepp.py 1 2 3 4 5 6 7 > output.txt`\
 `python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
 
-Parameter | Meaning
------------- | ---------------------------
-1. filename | required inputfile name, i.e., without ".txt" at the end
-2. cent or ppmuse | for centralized PrePP plans or, given a MuSE input, for computing P-P MuSE graphs
-3. g e f s |  g == greedy, e == exact, f == factorial approx, s == sampling
-4. #samples |  number of samples; only needed for sampling algorithm
-5. k |  value for top-k parameter, i.e., only for factorial and sampling algorithm
-6. #runs |  number of runs the experiment is repeated
-7. t or f |  printing plans true, or false
-
 |#|Parameter                                  |Meaning                  |
 |-|-------------------------------------------|-----------------------|
 |1| filename                                  |required inputfile name, i.e., without ".txt" at the end|
