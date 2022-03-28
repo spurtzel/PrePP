@@ -1,14 +1,7 @@
 # Plan Generators & PrePP Algorithms
 
 ## Plan generators
-Scripts for reproducing inputfiles for experiments presented in paper.
-Using the `_plan.sh`-version of a script, saves for each experiment the resulting INEv graphs in the `plans/` folder. 
-Please note, that only only one script can be executed at a time.
-
-- *\_single and *\_single\_plan execute set of experiments for single query of size 7, concrete event rates used in networks for experiments in paper can be found in top section of generate_network.py 
-- eventSkewLatency.sh execute set of experiments for query workload of size 10, and varying latency factors
-- conflicting_qwl to reproduce performance of multi-query scenario with varying overlap in event types between queries
-- *\_qwl and *\_qwl\_plan execute set of experiments for query workloads of varying sizes, concrete event rates used in networks for experiments in paper can be found in top section of generate_network.py 
+Scripts for reproducing inputfiles for experiments presented in paper. 
 
 ## Parameters for PrePP script
 Example: for executing the `prepp.py` script with the inputfile `single_query.txt` for a centralized PrePP plan using the sampling algorithm with s = 1024, top-k = 10, 500 runs, and printing resulting plans. Outputs are saved into `output.txt`:
@@ -33,3 +26,11 @@ Parameter | Meaning
 5. k |  value for top-k parameter, i.e., only for factorial and sampling algorithm
 6. #runs |  number of runs the experiment is repeated
 7. t or f |  printing plans true, or false
+
+## Schema of Results
+The script prints:
+- central push costs
+- costs for a particular run
+- average costs over all runs
+- average execution time
+- average transmission ratio over all runs
