@@ -4,7 +4,7 @@
 Scripts for reproducing inputfiles for experiments presented in paper. 
 
 ### Parameters for PrePP script
-`python3 1 2 3 4 5 6 7 > output.txt`__
+`python3 1 2 3 4 5 6 7 > output.txt`\
 `python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
 
 Parameter | Meaning
