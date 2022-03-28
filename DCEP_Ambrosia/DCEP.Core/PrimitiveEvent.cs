@@ -10,7 +10,7 @@ namespace DCEP.Core
         public PrimitiveEvent(EventType name, NodeName nodeName) : base(name, nodeName)
         {
         }
-        public PrimitiveEvent(EventType name, DateTime t) : base(name,t) // Samira
+        public PrimitiveEvent(EventType name, DateTime t) : base(name,t) // 
         {
         }
 
