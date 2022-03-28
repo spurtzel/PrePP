@@ -16,7 +16,7 @@ namespace DCEP.Core
         public DateTime timeCreated;
         
         [DataMember]
-        public DateTime actualTime; // Samira
+        public DateTime actualTime; // 
 
         [DataMember]
         public string ID { get; set; }
@@ -38,8 +38,8 @@ namespace DCEP.Core
 
         protected AbstractEvent(EventType name, NodeName nodeName)
         {
-            timeCreated = DateTime.Now; // Samira
-            actualTime = timeCreated; // Samira
+            timeCreated = DateTime.Now; //
+            actualTime = timeCreated; // 
             ID = Guid.NewGuid().ToString();
             attributes = new Dictionary<string, string>();
             knownToNodes = new List<NodeName>();
@@ -50,8 +50,8 @@ namespace DCEP.Core
         /*new*/
         protected AbstractEvent(EventType name, DateTime t)
         {
-            actualTime = DateTime.Now; // Samira
-            timeCreated = t; // Samira [generate event with creation time from input file]
+            actualTime = DateTime.Now; // 
+            timeCreated = t; // [generate event with creation time from input file]
             ID = Guid.NewGuid().ToString();
             attributes = new Dictionary<string, string>();
             knownToNodes = new List<NodeName>();
@@ -71,8 +71,8 @@ namespace DCEP.Core
             return String.Format("{{{0}, {1}, {2}}}", type, getCreatedTimestamp(), ID.Substring(0, 8));
         }
 
-        public abstract DateTime getOldest(); // Samira
-        public abstract DateTime getNewestAlt(); // Samira
+        public abstract DateTime getOldest(); //
+        public abstract DateTime getNewestAlt(); // 
        
         
         public override bool Equals(object obj)
@@ -111,7 +111,7 @@ namespace DCEP.Core
             return output;
         }
         
-        public IEnumerable<AbstractEvent> getAllEventComponents() //Steven
+        public IEnumerable<AbstractEvent> getAllEventComponents() //
         {
             List<AbstractEvent> output = new List<AbstractEvent>();
             var s = new Stack<AbstractEvent>();

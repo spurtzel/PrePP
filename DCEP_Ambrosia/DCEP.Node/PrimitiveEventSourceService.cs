@@ -30,6 +30,6 @@ namespace DCEP.Node
 
         public abstract void stop();
         
-        public abstract void setFull(Boolean b); // Samira [used for controlled input generation when input is given by dataset]
+        public abstract void setFull(Boolean b); // [used for controlled input generation when input is given by dataset]
     }
 }

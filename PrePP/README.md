@@ -1,11 +1,12 @@
 # Plan Generators & PrePP Algorithms
 
-## Plan generators
+## Inputfile generators
 Scripts for reproducing inputfiles used for single query and multi query experiments presented in the paper.\
 \
 For producing the inputfiles for a varying event node ratio, follow the steps:\
 Go into `../Generators/multi query/eventNodeRatio/scripts` and execute the `eventNode.sh` script. This will create 50 inputfiles for each parameter value from 0.1, 0.2, .. , 1.0. The resulting inputfiles are saved into `../eventNodeRatio/plans` and can be directly executed using the `PrePP` script as described below.
 
+## PrePP plan generators
 ### Parameters for PrePP script
 `python3 prepp.py 1 2 3 4 5 6 7 > output.txt`\
 `python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
@@ -22,7 +23,7 @@ Go into `../Generators/multi query/eventNodeRatio/scripts` and execute the `even
 
 
 ## Examples for executing the PrePP script
-Note: the `prepp.py` and `push_pull_plan_generator` scripts need to be in the same directory.\
+Note: the `prepp.py` and `push_pull_plan_generator.py` scripts need to be in the same directory.\
 \
 Example 1: for executing the `prepp.py` script with the inputfile `single_query.txt` for a centralized PrePP plan using the sampling algorithm with s = 1024, top-k = 10, 500 runs, and printing resulting plans. Outputs are saved into `output.txt`:
 `python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
@@ -43,5 +44,5 @@ The script prints:
 - central push costs
 - costs for a particular run
 - average costs over all runs
-- average execution time
+- average execution time over all runs
 - average transmission ratio over all runs

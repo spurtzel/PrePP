@@ -20,12 +20,12 @@ namespace DCEP.Core
             children = outputeventcomponents;
         }
 
-        public override DateTime getOldest() // Samira
+        public override DateTime getOldest() // 
         {
            return children.Select(even => even.getOldest()).ToList().Min();
         }
         
-        public override DateTime getNewestAlt() // Samira
+        public override DateTime getNewestAlt() // 
         {
             return children.Select(even => even.getNewestAlt()).ToList().Max();
         }
