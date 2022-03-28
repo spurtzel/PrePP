@@ -23,7 +23,7 @@ Go into `../Generators/multi query/eventNodeRatio/scripts` and execute the `even
 
 
 ## Examples for executing the PrePP script
-Note: the `prepp.py` and `push_pull_plan_generator` scripts need to be in the same directory.\
+Note: the `prepp.py` and `push_pull_plan_generator.py` scripts need to be in the same directory.\
 \
 Example 1: for executing the `prepp.py` script with the inputfile `single_query.txt` for a centralized PrePP plan using the sampling algorithm with s = 1024, top-k = 10, 500 runs, and printing resulting plans. Outputs are saved into `output.txt`:
 `python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
