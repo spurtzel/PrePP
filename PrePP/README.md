@@ -11,14 +11,24 @@ Go into `../Generators/multi query/eventNodeRatio/scripts` and execute the `even
 `python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
 
 Parameter | Meaning
------------- | ----------------------------------------------------------------------------------------
+------------ | ---------------------------
 1. filename | required inputfile name, i.e., without ".txt" at the end
 2. cent or ppmuse | for centralized PrePP plans or, given a MuSE input, for computing P-P MuSE graphs
 3. g e f s |  g == greedy, e == exact, f == factorial approx, s == sampling
-4. #samples |  number of samples, only for sampling algorithm
+4. #samples |  number of samples; only needed for sampling algorithm
 5. k |  value for top-k parameter, i.e., only for factorial and sampling algorithm
 6. #runs |  number of runs the experiment is repeated
 7. t or f |  printing plans true, or false
+
+|#|Parameter                                  |Meaning                  |
+|-|-------------------------------------------|-----------------------|
+|1| filename                                  |required inputfile name, i.e., without ".txt" at the end|
+|2| centralized or P-P MuSE                   |for centralized PrePP plans or, given a MuSE input, for computing P-P MuSE graphs|
+|3| algorithm                                 |g == greedy, e == exact, f == factorial approx, s == sampling
+|4| #samples                                  |number of samples; only needed for sampling algorithm |
+|5| top-k                                     |value for top-k parameter, i.e., only for factorial and sampling algorithm|
+|6| #runs                                     |number of runs the experiment is repeated|
+|7| printing plans                            |t == true, f == false|
 
 
 ## Examples for executing the PrePP script
@@ -35,6 +45,7 @@ Example 3: for executing the `prepp.py` script with the inputfile `single_query.
 
 Example 4: for executing the `prepp.py` script with the inputfile `multi_query_muse.txt` for a P-P MuSE graph using the greedy algorithm with s = 0, top-k = 0, 500 runs, and not printing resulting plans. Outputs are saved into `output.txt`:
 `python3 prepp.py multi_query_muse ppmuse g 0 0 500 f > output.txt`
+
 
 
 ## Schema of Results
