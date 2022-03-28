@@ -44,5 +44,5 @@ The script prints:
 - central push costs
 - costs for a particular run
 - average costs over all runs
-- average execution time
+- average execution time over all runs
 - average transmission ratio over all runs
