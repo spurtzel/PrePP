@@ -1,10 +1,12 @@
 # Plan Generators & PrePP Algorithms
 
 ## Plan generators
-Scripts for reproducing inputfiles for experiments presented in paper. 
+Scripts for reproducing inputfiles used for experiments presented in the paper.\
+\
+Example: go into `../Generators/multi query/eventNodeRatio/scripts` and execute the `eventNode.sh` script. This will create 50 inputfiles for each parameter value from 0.1, 0.2, .. , 1.0. The resulting inputfiles are saved into `../eventNodeRatio/plans` and can be directly executed using the `PrePP` script as described below.
 
 ### Parameters for PrePP script
-`python3 1 2 3 4 5 6 7 > output.txt`\
+`python3 prepp.py 1 2 3 4 5 6 7 > output.txt`\
 `python3 prepp.py single_query cent s 1024 10 500 t > output.txt`
 
 Parameter | Meaning
